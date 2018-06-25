@@ -1,0 +1,50 @@
+{
+  "name": "awesome-namestorage",
+  "version": "0.0.1",
+  "description": "Storage via window.name",
+  "keywords": ["arale", "utility"],
+  "homepage": "https://github.com/ant-ife/awesome-namestorage",
+  "author": "ziv<zivyangll@gmail.com>",
+  "scripts": {
+    "lint": "eslint --ext .js . --fix",
+    "build": "webpack -p --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ant-ife/awesome-namestorage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ant-ife/awesome-namestorage/issues"
+  },
+  "main": "./dist/index.js",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-stage-2": "^6.22.0",
+    "expect.js": "0.3.1",
+    "eslint": "^3.19.0",
+    "eslint-config-antife": "^1.0.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-html": "^3.0.0",
+    "pre-commit": "^1.2.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "spm": {
+    "main": "index.js",
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  },
+  "licenses": "MIT"
+}
