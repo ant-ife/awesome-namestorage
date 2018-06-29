@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="pwa demo">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>awesome-namestorage</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <script>
+      var isOnline = location.protocol === 'https:';
+      var head = document.getElementsByTagName('body').item(0);
+      var script = document.createElement('script');
+      script.src = (isOnline ? '//unpkg.com/canvas-color@latest' : '.') + '/dist/main.js';
+      script.type = 'text/javascript';
+      script.defer = true;
+      head.appendChild(script);
+    </script>
+  </body>
+</html>
+

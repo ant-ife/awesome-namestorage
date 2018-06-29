@@ -1,14 +1,18 @@
 {
-  "presets": [
-    ["env", { "modules": false }],
-    "stage-2"
-  ],
-  "plugins": ["transform-runtime"],
+  "presets": ["env", "stage-2", "latest"],
   "comments": false,
+  "plugins": [
+    "transform-runtime",
+    "transform-class-properties",
+  ],
   "env": {
+    "production": {
+      "plugins": ["transform-react-remove-prop-types"]
+    },
     "test": {
       "presets": ["env", "stage-2"],
       "plugins": [ "istanbul" ]
     }
   }
 }
+

@@ -14,6 +14,8 @@ Thumbs.db
 .svn/
 *.swp
 *.swo
+reports
+screenshots
 *.pyc
 *.pyo
 build

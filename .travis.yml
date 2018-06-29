@@ -1,16 +1,16 @@
 language: node_js
-
+sudo: false
 node_js:
-  - "0.10"
-
+  - 8
+addons:
+  apt:
+    packages:
+      - xvfb
 install:
-  - npm install spm@ninja coveralls
-
-before_script:
-  - node_modules/spm/bin/spm-install
-
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1366x768x24 > /dev/null 2>&1 &
 script:
-  - node_modules/spm/bin/spm-test
-
-after_success:
-  - node_modules/spm/bin/spm-test --coveralls | node_modules/.bin/coveralls
+  - npm i
+  - npm run ci
+after_script:
+  - npm install coveralls@2 && cat ./coverage/lcov.info | coveralls

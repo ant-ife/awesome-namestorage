@@ -1,4 +1,4 @@
-# nameStorage
+# awesome-namestorage
 
 ---
 
@@ -12,6 +12,8 @@
 [node-url]: http://nodejs.org/download/
 [download-image]: https://img.shields.io/npm/dm/awesome-namestorage.svg?style=flat-square
 [download-url]: https://npmjs.org/package/awesome-namestorage
+
+---
 
 nameStorage 是类似 sessionStroage 的键值对数据存储工具，但是可以跨域。
 
@@ -30,14 +32,17 @@ nameStorage 适用于同一窗口内跨页面数据存储与传递。
 ## 使用说明
 
 ```js
-var key = "key";
-var value = "value";
+const key = "key";
+const value = "value";
+
+const nameStorage = new NameStorage()
 
 nameStorage.setItem(key, value);
 
 nameStorage.getItem(key);
 
 nameStorage.removeItem(key);
+
 ```
 
 
@@ -93,7 +98,19 @@ window.name 没有固定的长度限制，只受内存大小限制。
 
 * [Improve cross-domain communication with client-side solutions](http://www.ibm.com/developerworks/library/wa-crossdomaincomm/)
 * [HTML5 sessionStorage for "every" browsers](https://code.google.com/p/sessionstorage/)
+* [name-storage](https://github.com/aralejs/name-storage)
 
 ## LICENSES
 
 MIT
+<!-- GITCONTRIBUTOR_START -->
+
+## Contributors
+
+|[<img src="https://avatars1.githubusercontent.com/u/11460601?v=4" width="100px;"/><br/><sub><b>zivyangll</b></sub>](https://github.com/zivyangll)<br/>
+| :---: |
+
+
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto upated at `Fri Jun 29 2018 22:18:29 GMT+0800`.
+
+<!-- GITCONTRIBUTOR_END -->
