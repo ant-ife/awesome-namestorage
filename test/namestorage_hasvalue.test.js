@@ -22,6 +22,13 @@ describe('test/namestorage_empty.test.js', () => {
     assert.equal(ns.getItem('a'), '1')
   })
 
+  it('nameStorage.valueof()', () => {
+    const ns = new NameStorage(ORIGIN_NAME)
+    ns.setItem('a', 1)
+    ns.setItem('b', 2)
+    assert.deepequal(ns.valueOf(), {'a': '1', 'b': '2'})
+  })
+
   it('nameStorage.removeItem()', () => {
     const ns = new NameStorage(ORIGIN_NAME)
     const key = 'b'
